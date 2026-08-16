@@ -1,0 +1,15 @@
+/*
+ * narrow.css — 单栏窄读（版式 L1）
+ * 产物中全部内联。基准值：max-width 560px；密度取「中/松」。
+ */
+
+/* 容器 */
+/* <section style="max-width:560px;margin:0 auto;padding:32px 28px 40px;background:{{CONTENT_BG}};color:{{TEXT}};font-family:{{BODY_FONT}};font-size:16px;line-height:1.85;letter-spacing:0.5px;box-sizing:border-box;"> */
+
+/* 标题区：眉题 → h1 → 作者/日期 → 1px 细线 */
+/* 细线：<div style="height:1px;background:{{DIVIDER}};margin:0 0 24px;"></div> */
+
+/* 正文 15-16px；h2 上间距取 36-40px；图片小图居中不铺满 */
+/* 装饰上限 L1：细线 + 引用左竖线；不放大面积色块 */
+
+/* 结尾：细线 + 结语，无 CTA 卡片（除非原文有） */

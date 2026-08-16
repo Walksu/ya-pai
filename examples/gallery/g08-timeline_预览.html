@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>g08-timeline · 公众号排版预览</title>
+<style>
+  body{margin:0;background:#eef0f2;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;-webkit-text-size-adjust:100%;}
+  .gzh-toolbar{position:fixed;top:0;left:0;right:0;height:54px;background:#ffffff;box-shadow:0 1px 10px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;padding:0 16px;z-index:99;}
+  .gzh-left{display:flex;align-items:center;gap:10px;min-width:0;}
+  .gzh-hint{font-size:13px;color:#6b7280;line-height:1.4;}
+  .gzh-hint b{color:#111827;}
+  .gzh-badge{background:#EEF4FF;color:#1E4F8A;border:1px solid #CFE0F5;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;white-space:nowrap;letter-spacing:0.5px;}
+  .gzh-copy{background:#059669;color:#fff;border:0;border-radius:9px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(5,150,105,.28);white-space:nowrap;transition:transform .08s,background .15s;}
+  .gzh-copy:hover{background:#047857;}
+  .gzh-copy:active{transform:translateY(1px);}
+  .gzh-actions{display:flex;align-items:center;gap:8px;}
+  .gzh-view{background:#f3f4f6;color:#374151;border:1px solid #e5e7eb;border-radius:9px;padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s;}
+  .gzh-view.active{background:#e0f2fe;color:#0369a1;border-color:#bae6fd;}
+  .gzh-toast{position:fixed;top:66px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s;z-index:100;box-shadow:0 6px 20px rgba(0,0,0,.25);max-width:88vw;text-align:center;}
+  .gzh-toast.show{opacity:1;}
+  .gzh-stage{max-width:700px;margin:78px auto 64px;padding:0 8px;}
+  .gzh-stage.mobile{max-width:390px;}
+  .gzh-stage.mobile #gzh-content{background:#fff;}
+  .gzh-stage.desktop #gzh-content{background:#fff;}
+  @media(max-width:520px){.gzh-hint{display:none;}}
+</style>
+</head>
+<body>
+<div class="gzh-toolbar">
+  <div class="gzh-left">
+    <span class="gzh-badge">GALLERY 08 · 时间线式</span>
+    <span class="gzh-hint">👇 下方是排版效果 · 点右侧 <b>复制</b> 直接粘到公众号</span>
+  </div>
+  <div class="gzh-actions">
+    <button class="gzh-view" id="gzhViewBtn" onclick="gzhToggleView()">📱 手机</button>
+    <button class="gzh-copy" id="gzhCopyBtn" onclick="gzhCopy()">📋 复制到公众号</button>
+  </div>
+</div>
+<div class="gzh-toast" id="gzhToast"></div>
+<div class="gzh-stage">
+  <div id="gzh-content">
+<section style="max-width:620px;margin:0 auto;background:#F8FAF6;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif;color:#33413A;line-height:1.8;letter-spacing:0.5px;box-sizing:border-box;padding:28px 20px 36px;overflow-x:hidden;">
+  <p style="margin:0 0 10px;font-size:11px;letter-spacing:3px;color:#5F7A62;font-family:'SF Mono',Consolas,Monaco,monospace;"><span leaf="">CHRONICLE · 演进时间线</span></p>
+  <section style="height:1px;background:#DDE4D8;margin:0 0 26px;"><span leaf=""><br></span></section>
+  <p style="margin:0 0 28px;font-size:15px;line-height:1.8;text-align:justify;color:#33413A;letter-spacing:0.5px;"><span leaf="">这是一篇用于组合画廊的示例短文，用</span><span style="border-bottom:2px solid #5F7A62;font-weight:600;color:#24302A;"><span leaf="">时间线的方式</span></span><span leaf="">呈现三个章节的演进。</span></p>
+  <section style="margin:0 0 24px;">
+    <section style="display:flex;align-items:flex-start;margin:0 0 24px;">
+      <section style="flex-shrink:0;width:26px;display:flex;flex-direction:column;align-items:center;margin-right:14px;">
+        <span style="width:12px;height:12px;border-radius:50%;background:#5F7A62;display:inline-block;margin-top:5px;"><span leaf=""><br></span></span>
+        <span style="width:1px;flex:1;background:#DDE4D8;display:inline-block;margin-top:4px;"><span leaf=""><br></span></span>
+      </section>
+      <section style="flex:1;min-width:0;">
+        <p style="margin:0 0 4px;font-size:11px;letter-spacing:2px;color:#7D8B82;font-family:'SF Mono',Consolas,Monaco,monospace;"><span leaf="">01 · 起点</span></p>
+        <p style="margin:0;font-size:16px;font-weight:800;color:#24302A;line-height:1.6;"><span leaf="">第一章：关于留白</span></p>
+        <p style="margin:6px 0 0;font-size:14px;line-height:1.8;color:#33413A;"><span leaf="">好的排版不靠堆装饰，而靠结构。段落间距、章节间距、行高统一，读者的视线就有节奏。层级要清楚、间距要统一、强调要克制。</span></p>
+      </section>
+    </section>
+    <section style="display:flex;align-items:flex-start;margin:0 0 24px;">
+      <section style="flex-shrink:0;width:26px;display:flex;flex-direction:column;align-items:center;margin-right:14px;">
+        <span style="width:12px;height:12px;border-radius:50%;background:#5F7A62;display:inline-block;margin-top:5px;"><span leaf=""><br></span></span>
+        <span style="width:1px;flex:1;background:#DDE4D8;display:inline-block;margin-top:4px;"><span leaf=""><br></span></span>
+      </section>
+      <section style="flex:1;min-width:0;">
+        <p style="margin:0 0 4px;font-size:11px;letter-spacing:2px;color:#7D8B82;font-family:'SF Mono',Consolas,Monaco,monospace;"><span leaf="">02 · 演进</span></p>
+        <p style="margin:0;font-size:16px;font-weight:800;color:#24302A;line-height:1.6;"><span leaf="">第二章：关于节奏</span></p>
+        <p style="margin:6px 0 0;font-size:14px;line-height:1.8;color:#33413A;"><span leaf="">密集文字之后需要视觉喘气。图片、引用、卡片都是呼吸点，但</span><span style="border-bottom:2px solid #5F7A62;font-weight:600;color:#24302A;"><span leaf="">全篇只允许一个「大」元素</span></span><span leaf="">。</span></p>
+        <section style="margin:10px 0 0;background:#EDF1E9;border-left:3px solid #5F7A62;border-radius:0 8px 8px 0;padding:10px 14px;"><p style="margin:0;font-family:'SF Mono',Consolas,Monaco,monospace;font-size:13px;line-height:1.6;color:#24302A;"><span leaf="">ya-pai render --layout timeline --title notes</span></p></section>
+      </section>
+    </section>
+    <section style="display:flex;align-items:flex-start;margin:0;">
+      <section style="flex-shrink:0;width:26px;display:flex;flex-direction:column;align-items:center;margin-right:14px;">
+        <span style="width:12px;height:12px;border-radius:50%;background:#5F7A62;display:inline-block;margin-top:5px;"><span leaf=""><br></span></span>
+      </section>
+      <section style="flex:1;min-width:0;">
+        <p style="margin:0 0 4px;font-size:11px;letter-spacing:2px;color:#7D8B82;font-family:'SF Mono',Consolas,Monaco,monospace;"><span leaf="">03 · 收束</span></p>
+        <p style="margin:0;font-size:16px;font-weight:800;color:#24302A;line-height:1.6;"><span leaf="">第三章：关于收尾</span></p>
+        <p style="margin:6px 0 0;font-size:14px;line-height:1.8;color:#33413A;"><span leaf="">结尾应该克制。一行收尾线，一张签名卡，不虚构互动引导。</span></p>
+      </section>
+    </section>
+  </section>
+  <p style="margin:0 0 20px;font-size:15px;line-height:1.8;text-align:justify;color:#33413A;letter-spacing:0.5px;"><span leaf="">演进到此告一段落：</span><span style="background:#E2E8DD;border-radius:3px;padding:1px 5px;color:#24302A;"><strong style="font-weight:700;"><span leaf="">从留白到节奏再到收尾，每一章都是上一章的答案。</span></strong></span></p>
+  <section style="height:1px;background:#DDE4D8;margin:28px 0 0;"><span leaf=""><br></span></section>
+  <section style="margin:40px 0 0;padding:30px 26px 26px;border-top:1px solid #DDE4D8;border-bottom:1px solid #DDE4D8;text-align:center;">
+    <p style="margin:0 0 16px;font-size:10px;letter-spacing:5px;color:#5F7A62;font-family:'SF Mono',Consolas,Monaco,monospace;"><span leaf="">AUTHOR · 作者</span></p>
+    <p style="margin:0 0 12px;font-size:20px;font-weight:600;color:#24302A;letter-spacing:4px;line-height:1.5;"><span leaf="">{{作者名}}</span></p>
+    <section style="width:32px;height:1px;background:#5F7A62;margin:0 auto 14px;"><span leaf=""><br></span></section>
+    <p style="margin:0;font-size:13px;color:#7D8B82;letter-spacing:1px;line-height:1.9;"><span leaf="">{{一句话简介}}</span></p>
+  </section>
+</section>
+  </div>
+</div>
+<script>
+  function gzhShowToast(msg){
+    var t=document.getElementById('gzhToast');
+    t.textContent=msg;t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer=setTimeout(function(){t.classList.remove('show');},2800);
+  }
+  function gzhCopy(){
+    var el=document.getElementById('gzh-content');
+    var html=el.innerHTML;
+    var text=el.innerText||el.textContent||'';
+    var btn=document.getElementById('gzhCopyBtn');
+    var done=function(){
+      gzhShowToast('✅ 已复制！去公众号编辑器按 Ctrl/⌘+V 粘贴即可');
+      var old=btn.textContent;btn.textContent='✅ 已复制';
+      setTimeout(function(){btn.textContent=old;},2200);
+    };
+    var fail=function(){
+      gzhShowToast('⚠ 自动复制失败，请手动全选(Ctrl/⌘+A)再复制(Ctrl/⌘+C)');
+    };
+    // 首选 Clipboard API：显式写入 text/html + text/plain 双格式，
+    // 避免 execCommand('copy') 只写纯文本导致粘贴到公众号后格式全丢。
+    if(navigator.clipboard && window.ClipboardItem){
+      navigator.clipboard.write([
+        new ClipboardItem({
+          'text/html': new Blob([html],{type:'text/html'}),
+          'text/plain': new Blob([text],{type:'text/plain'})
+        })
+      ]).then(done).catch(function(){
+        gzhCopyFallback(html,text,done,fail);
+      });
+    }else{
+      gzhCopyFallback(html,text,done,fail);
+    }
+  }
+  function gzhCopyFallback(html,text,done,fail){
+    // 回退：把内容放进 contenteditable 再 execCommand('copy')，
+    // 从可编辑区域复制比普通选区更可能携带富文本。
+    var host=document.createElement('div');
+    host.setAttribute('contenteditable','true');
+    host.style.cssText='position:fixed;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;';
+    host.innerHTML=html;
+    document.body.appendChild(host);
+    var range=document.createRange();
+    range.selectNodeContents(host);
+    var sel=window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    var ok=false;
+    try{ok=document.execCommand('copy');}catch(e){ok=false;}
+    sel.removeAllRanges();
+    document.body.removeChild(host);
+    if(ok){done();}else{fail();}
+  }
+  function gzhToggleView(){
+    var stage=document.querySelector('.gzh-stage');
+    var btn=document.getElementById('gzhViewBtn');
+    var mobile=stage.classList.toggle('mobile');
+    stage.classList.toggle('desktop',!mobile);
+    btn.textContent=mobile?'🖥 桌面':'📱 手机';
+    btn.classList.toggle('active',mobile);
+  }
+  document.querySelector('.gzh-stage').classList.add('desktop');
+</script>
+</body>
+</html>

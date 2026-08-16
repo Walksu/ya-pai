@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}} · 公众号排版预览</title>
+<style>
+  body{margin:0;background:#eef0f2;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;-webkit-text-size-adjust:100%;}
+  .gzh-toolbar{position:fixed;top:0;left:0;right:0;height:54px;background:#ffffff;box-shadow:0 1px 10px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;padding:0 16px;z-index:99;}
+  .gzh-left{display:flex;align-items:center;gap:10px;min-width:0;}
+  .gzh-hint{font-size:13px;color:#6b7280;line-height:1.4;}
+  .gzh-hint b{color:#111827;}
+  .gzh-badge{background:#EEF4FF;color:#1E4F8A;border:1px solid #CFE0F5;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;white-space:nowrap;letter-spacing:0.5px;}
+  .gzh-copy{background:#059669;color:#fff;border:0;border-radius:9px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(5,150,105,.28);white-space:nowrap;transition:transform .08s,background .15s;}
+  .gzh-copy:hover{background:#047857;}
+  .gzh-copy:active{transform:translateY(1px);}
+  .gzh-actions{display:flex;align-items:center;gap:8px;}
+  .gzh-view{background:#f3f4f6;color:#374151;border:1px solid #e5e7eb;border-radius:9px;padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s;}
+  .gzh-view.active{background:#e0f2fe;color:#0369a1;border-color:#bae6fd;}
+  .gzh-toast{position:fixed;top:66px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s;z-index:100;box-shadow:0 6px 20px rgba(0,0,0,.25);max-width:88vw;text-align:center;}
+  .gzh-toast.show{opacity:1;}
+  .gzh-stage{max-width:700px;margin:78px auto 64px;padding:0 8px;}
+  .gzh-stage.mobile{max-width:390px;}
+  .gzh-stage.mobile #gzh-content{background:#fff;}
+  .gzh-stage.desktop #gzh-content{background:#fff;}
+  @media(max-width:520px){.gzh-hint{display:none;}}
+</style>
+</head>
+<body>
+<div class="gzh-toolbar">
+  <div class="gzh-left">
+    <span class="gzh-badge">{{LABEL}}</span>
+    <span class="gzh-hint">👇 下方是排版效果 · 点右侧 <b>复制</b> 直接粘到公众号</span>
+  </div>
+  <div class="gzh-actions">
+    <button class="gzh-view" id="gzhViewBtn" onclick="gzhToggleView()">📱 手机</button>
+    <button class="gzh-copy" id="gzhCopyBtn" onclick="gzhCopy()">📋 复制到公众号</button>
+  </div>
+</div>
+<div class="gzh-toast" id="gzhToast"></div>
+<div class="gzh-stage">
+  <div id="gzh-content">
+<!--GZH_CONTENT-->
+  </div>
+</div>
+<script>
+  function gzhShowToast(msg){
+    var t=document.getElementById('gzhToast');
+    t.textContent=msg;t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer=setTimeout(function(){t.classList.remove('show');},2800);
+  }
+  function gzhCopy(){
+    var el=document.getElementById('gzh-content');
+    var html=el.innerHTML;
+    var text=el.innerText||el.textContent||'';
+    var btn=document.getElementById('gzhCopyBtn');
+    var done=function(){
+      gzhShowToast('✅ 已复制！去公众号编辑器按 Ctrl/⌘+V 粘贴即可');
+      var old=btn.textContent;btn.textContent='✅ 已复制';
+      setTimeout(function(){btn.textContent=old;},2200);
+    };
+    var fail=function(){
+      gzhShowToast('⚠ 自动复制失败，请手动全选(Ctrl/⌘+A)再复制(Ctrl/⌘+C)');
+    };
+    // 首选 Clipboard API：显式写入 text/html + text/plain 双格式，
+    // 避免 execCommand('copy') 只写纯文本导致粘贴到公众号后格式全丢。
+    if(navigator.clipboard && window.ClipboardItem){
+      navigator.clipboard.write([
+        new ClipboardItem({
+          'text/html': new Blob([html],{type:'text/html'}),
+          'text/plain': new Blob([text],{type:'text/plain'})
+        })
+      ]).then(done).catch(function(){
+        gzhCopyFallback(html,text,done,fail);
+      });
+    }else{
+      gzhCopyFallback(html,text,done,fail);
+    }
+  }
+  function gzhCopyFallback(html,text,done,fail){
+    // 回退：把内容放进 contenteditable 再 execCommand('copy')，
+    // 从可编辑区域复制比普通选区更可能携带富文本。
+    var host=document.createElement('div');
+    host.setAttribute('contenteditable','true');
+    host.style.cssText='position:fixed;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;';
+    host.innerHTML=html;
+    document.body.appendChild(host);
+    var range=document.createRange();
+    range.selectNodeContents(host);
+    var sel=window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    var ok=false;
+    try{ok=document.execCommand('copy');}catch(e){ok=false;}
+    sel.removeAllRanges();
+    document.body.removeChild(host);
+    if(ok){done();}else{fail();}
+  }
+  function gzhToggleView(){
+    var stage=document.querySelector('.gzh-stage');
+    var btn=document.getElementById('gzhViewBtn');
+    var mobile=stage.classList.toggle('mobile');
+    stage.classList.toggle('desktop',!mobile);
+    btn.textContent=mobile?'🖥 桌面':'📱 手机';
+    btn.classList.toggle('active',mobile);
+  }
+  document.querySelector('.gzh-stage').classList.add('desktop');
+</script>
+</body>
+</html>

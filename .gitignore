@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 本地测试产物（不入库，保留本地文件）
+examples/Codex*
+examples/*_排版_*.html

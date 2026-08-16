@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ya-pai 组合画廊</title>
+<style>
+  body { margin:0; background:#F2F1EE; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif; color:#383732; }
+  header { max-width:1200px; margin:0 auto; padding:32px 20px 8px; }
+  header h1 { font-size:24px; margin:0 0 8px; }
+  header p { font-size:14px; color:#8E8C84; margin:0 0 4px; line-height:1.7; }
+  .grid { max-width:1200px; margin:0 auto; padding:20px; display:flex; flex-wrap:wrap; gap:20px; }
+  .card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.06); width:380px; display:flex; flex-direction:column; }
+  .meta { padding:16px 18px 12px; border-bottom:1px solid #EEE; }
+  .meta .no { font-size:13px; letter-spacing:1px; color:#4A5568; font-weight:800; display:flex; align-items:center; gap:9px; }
+  .chip { display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; background:#232C36; color:#fff; border-radius:8px; font-size:14px; font-weight:900; font-family:'SF Mono',Consolas,monospace; }
+  .meta h2 { font-size:17px; margin:4px 0 6px; }
+  .meta .desc { font-size:12.5px; color:#8E8C84; line-height:1.7; margin:0 0 8px; }
+  .meta .dims { font-size:11.5px; color:#595959; line-height:1.8; background:#FAF9F6; border-radius:8px; padding:8px 10px; margin:0; }
+  .frame { flex:1; }
+  iframe { width:100%; height:760px; border:0; display:block; background:#fff; }
+  .tip { max-width:1200px; margin:0 auto; padding:0 20px 32px; font-size:13px; color:#8E8C84; line-height:1.8; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ya-pai 组合画廊</h1>
+  <p>同一篇示例短文，十一种不同的「版式骨架 × 标题风格」组合。选之前先看第一眼。</p>
+  <p><b>编号：</b>每张卡左上角是编号（01–11，文件名 g01–g11）。在对话里直接说编号或名字即可，例如「我选 g05」或「接近第 5 套」。</p>
+  <p>用法：告诉 Codex「我选第 N 套，接近这套」，再单点微调（标题换 X / 版式换 Y / 色板用 Z），其余交给 Agent 调和。</p>
+  <p>另见：<a href="diagram-demo.html">图解总览（26 种图解形态 F14a–F14z）</a></p>
+</header>
+<div class="grid">
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">01</span>GALLERY 01 · g01-bookish-essay</div>
+      <h2>书卷长文</h2>
+      <p class="desc">第一眼：纸页感。窄、居中、大留白，墨线方块章头，衬线正文，几乎没有卡片。</p>
+      <p class="dims">人文书卷 × 暖米 × 中文友好衬线 × L1 单栏流（窄）× 松 × 细线 × 纯色 × 编号+签名 × 墨线章头 F3e</p>
+    </div>
+    <div class="frame"><iframe src="g01-bookish-essay_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">02</span>GALLERY 02 · g02-tech-doc</div>
+      <h2>科技文档</h2>
+      <p class="desc">第一眼：终端感。等宽眉题、终端标签章头、目录卡、编号圆标，结构块清晰。</p>
+      <p class="dims">冷冽理性 × 冷灰 × 等宽点缀 × L2 导读+章节流 × 中 × 细线 × 纯色 × 目录+编号+代码增强+签名 × 终端标签 F3i</p>
+    </div>
+    <div class="frame"><iframe src="g02-tech-doc_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">03</span>GALLERY 03 · g03-cool-report</div>
+      <h2>冷静报告</h2>
+      <p class="desc">第一眼：论文感。大数字+竖线章头、细线看点目录、微渐变底，密度偏紧、信息前置。</p>
+      <p class="dims">冷冽理性 × 黛蓝 × 无衬线标题+衬线正文 × L2 导读+章节流 × 紧 × 细线 × 微渐变 × 目录+编号+图注+签名 × 大数字竖线 F3c</p>
+    </div>
+    <div class="frame"><iframe src="g03-cool-report_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">04</span>GALLERY 04 · g04-magazine-cover</div>
+      <h2>杂志封面</h2>
+      <p class="desc">第一眼：内刊卷首语。编辑部眉批封面 + 顶部色带，衬线居中大字章头，签名收在浅底卡里。</p>
+      <p class="dims">温暖纸感 × 奶油 × 宋体标题+黑体正文 × L4 卡片式 × 松 × 强调引用 × 顶部色带 × 编号+签名 × 衬线居中大字 F3h</p>
+    </div>
+    <div class="frame"><iframe src="g04-magazine-cover_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">05</span>GALLERY 05 · g05-poster-verdict</div>
+      <h2>海报观点</h2>
+      <p class="desc">第一眼：一张 verdict 页。黄白蓝三色分区、深蓝反白 hero 与章头、深色代码块、海报式结论收束。</p>
+      <p class="dims">现代极简 × 高对比（靛蓝 accent）× 全无衬线 × L5 海报式 × 紧 × 轻微色块 × B6 三色分区（黄白蓝）× 编号+verdict+签名 × 反白通栏 F3f</p>
+    </div>
+    <div class="frame"><iframe src="g05-poster-verdict_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">06</span>GALLERY 06 · g06-minimal-void</div>
+      <h2>极简留白</h2>
+      <p class="desc">第一眼：空气感。水印大数字叠底、行高 2.0、无边框无色块，几乎只有字与留白。</p>
+      <p class="dims">现代极简 × 低饱和 × 全无衬线 × L1 单栏流 × 松 × 几乎无装饰 × 纯色 × 编号+签名 × 水印大数字 F3b</p>
+    </div>
+    <div class="frame"><iframe src="g06-minimal-void_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">07</span>GALLERY 07 · g07-lecture-paper</div>
+      <h2>讲义纸感</h2>
+      <p class="desc">第一眼：一页页纸面讲义。眉题页码系统、大字号正文、叠底大数字章头、楷体大引号、高亮条、重叠圆图解、SUMMARY 结论卡。</p>
+      <p class="dims">安静编辑 × 纸绿面色板 × 衬线标题+无衬线正文（引用楷体）× L7 讲义式 × 中 × 细线 × 纯色 × 编号+SUMMARY+签名 × 水印数字叠底 F3b叠</p>
+    </div>
+    <div class="frame"><iframe src="g07-lecture-paper_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">08</span>GALLERY 08 · g08-timeline</div>
+      <h2>时间线式</h2>
+      <p class="desc">第一眼：一条演进轴。圆点+竖线串起章节，像编年史，适合复盘与演进类内容。</p>
+      <p class="dims">冷冽理性 × 墨绿 × 等宽点缀 × L3 时间线式 × 中 × 细线 × 纯色 × 编号+签名 × 时间线节点 F8d</p>
+    </div>
+    <div class="frame"><iframe src="g08-timeline_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">09</span>GALLERY 09 · g09-newspaper</div>
+      <h2>报章式</h2>
+      <p class="desc">第一眼：一张报纸版面。报头眉线、刊号日期、方块编号、栏线引用与 END 线，像安静的副刊评论版。</p>
+      <p class="dims">安静编辑 × 暖米面色板 × 宋体报章 × L8 报章式 × 中 × 细线 × 纯色（纸底）× 报头+栏目行+编号+签名 × 报章方块章头 F3j</p>
+    </div>
+    <div class="frame"><iframe src="g09-newspaper_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">10</span>GALLERY 10 · g10-letter</div>
+      <h2>信笺式</h2>
+      <p class="desc">第一眼：一封手写信。信头称呼、日期戳、大行高正文、楷体引语、此致敬礼与落款，收在 colophon 里。</p>
+      <p class="dims">人文书卷 × 陶土面色板 × 中文友好衬线 × L9 信笺式 × 松 × 细线 × 纯色（纸底）× 日期戳+此致落款+签名 × 墨线轻标 F3e</p>
+    </div>
+    <div class="frame"><iframe src="g10-letter_预览.html"></iframe></div>
+  </div>
+  <div class="card">
+    <div class="meta">
+      <div class="no"><span class="chip">11</span>GALLERY 11 · g11-terminal</div>
+      <h2>终端式</h2>
+      <p class="desc">第一眼：一个终端窗口。红黄绿圆点顶栏、提示符开篇、正文与代码同底、$ done 收束，像在终端里读完一篇文章。</p>
+      <p class="dims">冷冽理性 × 深色 × 等宽点缀 × L10 终端式 × 紧 × 细线 × 深浅分层 × 窗口顶栏+提示符+代码增强+签名 × 终端标签 F3i</p>
+    </div>
+    <div class="frame"><iframe src="g11-terminal_预览.html"></iframe></div>
+  </div>
+</div>
+<div class="tip">注：每张卡里的页面右上角都有「复制到公众号」按钮，也可直接打开对应 *_预览.html 全屏看。画廊只展示代表性组合；实际排版时九维度仍可自由组合、自由填写。g09–g11 是 2026.08 新增的三套骨架（报章 / 信笺 / 终端），与既有 8 套共用同一套组件库。</div>
+</body>
+</html>

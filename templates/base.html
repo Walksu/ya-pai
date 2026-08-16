@@ -1,0 +1,38 @@
+<!--
+  旧版整页骨架（仅浏览器预览参考）。
+  当前产物标准：纯 <section> 片段 + 全部文字 <span leaf=""> 包裹 + 禁 <div>/class/id，
+  见 references/output-spec.md 与 references/component-library.md；组装请从组件库取，不要用本文件。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{文章标题}}</title>
+</head>
+<!--
+  使用说明（生成时删除本注释块）：
+  1. 把下面所有 {{占位符}} 替换为所选 token 的具体值
+     （色值见 tokens/color-palettes.md；字体栈见 tokens/font-pairings.md；
+       宽度/内边距/间距见 tokens/layouts.md + tokens/density.md）。
+  2. 产物不得包含 <style>/<script>/<link>/class/id，所有样式内联在元素 style 中。
+  3. 正文每个元素按 references/typography.md 的配方写内联样式。
+  4. 标题区可用 partials/meta.html；目录可用 partials/toc.html。
+-->
+<body style="margin:0;background:{{PAGE_BG}};">
+  <section style="max-width:{{CONTENT_WIDTH}};margin:0 auto;padding:{{CONTAINER_PADDING}};background:{{CONTENT_BG}};color:{{TEXT_COLOR}};font-family:{{BODY_FONT_STACK}};font-size:{{BODY_SIZE}};line-height:{{BODY_LINE_HEIGHT}};letter-spacing:{{BODY_LETTER_SPACING}};box-sizing:border-box;">
+
+    <!-- 标题区：眉题 / h1 / 副题 / 作者日期（见 partials/meta.html） -->
+
+    <!-- 可选引言引用（blockquote） -->
+
+    <!-- 可选目录卡片（仅 with-toc，见 partials/toc.html） -->
+
+    <!-- 正文章节：h2/h3、p、blockquote、ul/ol、pre、table、figure、分隔线 -->
+    <!-- 每个元素都必须带完整内联样式，禁止依赖继承 -->
+
+    <!-- 结尾区：结语 / 可选签名卡 -->
+
+  </section>
+</body>
+</html>

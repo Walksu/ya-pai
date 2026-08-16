@@ -1,0 +1,4 @@
+interface:
+  display_name: "雅排 · 公众号排版"
+  short_description: "把 Markdown 排版成可直接粘贴的公众号 HTML，九维度组合式风格"
+  default_prompt: "用 $ya-pai 把这篇 Markdown 文章排版成公众号 HTML。"

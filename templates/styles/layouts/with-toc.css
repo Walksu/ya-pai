@@ -1,0 +1,22 @@
+/*
+ * with-toc.css — 带侧边目录（版式 L3）
+ * 浏览器预览可用双栏 + sticky；公众号版一律退化为「引言后静态目录卡片」。
+ * 产物中全部内联。
+ */
+
+/* 容器：max-width 660px（公众号版单栏） */
+/* <section style="max-width:660px;margin:0 auto;padding:36px 28px 44px;background:{{CONTENT_BG}};color:{{TEXT}};font-family:{{BODY_FONT}};font-size:16px;line-height:1.8;box-sizing:border-box;"> */
+
+/* 目录卡片（公众号版，放标题区之后、引言之前） */
+/* <section style="margin:0 0 28px;padding:20px 22px;background:{{ACCENT_SOFT}};border-radius:8px;"> */
+/*   <p style="margin:0 0 12px;font-size:12px;letter-spacing:2px;color:{{ACCENT}};">目录</p> */
+/*   <ol style="margin:0;padding-left:0;list-style:none;"> */
+/*     <li style="margin:0;padding:8px 0;border-bottom:1px solid {{DIVIDER}};color:{{TEXT}};font-size:15px;line-height:1.6;">01　章节标题原文</li> */
+/*     ... 最多 6 条 ... */
+/*   </ol> */
+/* </section> */
+
+/* 预览双栏（可选）：外层 flex，目录栏 position:sticky;top:12px;width:150px；正文栏 flex:1 */
+/* 公众号版不做双栏 */
+
+/* 章节编号：h2 前加 <span style="color:{{ACCENT}};font-family:{{MONO}};font-size:13px;letter-spacing:1px;">01</span> */

@@ -1,0 +1,15 @@
+/*
+ * standard.css — 单栏适中（版式 L2）
+ * 产物中全部内联。基准值：max-width 660px；密度取「中」。
+ */
+
+/* 容器 */
+/* <section style="max-width:660px;margin:0 auto;padding:36px 28px 44px;background:{{CONTENT_BG}};color:{{TEXT}};font-family:{{BODY_FONT}};font-size:16px;line-height:1.8;letter-spacing:0.5px;box-sizing:border-box;"> */
+
+/* 标题区：眉题 → h1 → 副题/作者 → 1px 细线 */
+/* 细线：<div style="height:1px;background:{{DIVIDER}};margin:0 0 28px;"></div> */
+
+/* 可容纳：图注、表格、拉引文；装饰 L0-L3 均可（按气质） */
+/* 表格宽 100% + collapse；代码块深/浅底按气质 */
+
+/* 结尾：细线 + 结语；原文有签名才加签名卡 */

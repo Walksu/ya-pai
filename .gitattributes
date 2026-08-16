@@ -1,0 +1,9 @@
+# 统一换行符，避免跨平台 diff 噪音
+* text=auto
+*.py  text eol=lf
+*.md  text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.yaml text eol=lf
+*.sh  text eol=lf
+*.png binary

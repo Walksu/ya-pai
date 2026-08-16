@@ -1,0 +1,95 @@
+/*
+ * typography.css — 标题/正文/引用/列表/代码/图注的内联配方
+ * 用法：把每条规则的取值直接写进元素 style。所有占位符替换为所选 token 具体值。
+ * 完整细则见 references/typography.md。
+ */
+
+/* h1 文章标题（全篇唯一） */
+/* <h1 style="margin:0 0 12px;font-family:{{HEADING_FONT_STACK}};font-size:25px;font-weight:600;line-height:1.45;color:{{HEADING_COLOR}};letter-spacing:1px;"> */
+h1 {
+  margin: 0 0 12px;
+  font-family: var(--heading-font);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--heading);
+  letter-spacing: 1px;
+}
+
+/* h2 章节标题：上大下小（上 section-gap，下 12-14px） */
+/* <h2 style="margin:{{SECTION_GAP}} 0 14px;font-family:{{HEADING_FONT_STACK}};font-size:19px;font-weight:600;line-height:1.4;color:{{HEADING_COLOR}};letter-spacing:1px;"> */
+h2 {
+  margin: var(--section-gap) 0 14px;
+  font-family: var(--heading-font);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--heading);
+  letter-spacing: 1px;
+}
+
+/* h3 子节标题 */
+/* <h3 style="margin:24px 0 10px;font-family:{{HEADING_FONT_STACK}};font-size:17px;font-weight:600;line-height:1.4;color:{{HEADING_COLOR}};"> */
+h3 {
+  margin: 24px 0 10px;
+  font-family: var(--heading-font);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--heading);
+}
+
+/* 正文段落：无缩进 + 段间距 */
+/* <p style="margin:0 0 {{PARA_GAP}};text-align:justify;"> */
+p {
+  margin: 0 0 var(--para-gap);
+  text-align: justify;
+}
+
+/* 引用：短引用左竖线（L0/L1） */
+/* <blockquote style="margin:24px 0;padding:2px 0 2px 16px;border-left:3px solid {{QUOTE_BAR}};color:{{TEXT_SECONDARY}};line-height:1.8;"> */
+blockquote {
+  margin: 24px 0;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid var(--quote-bar);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* 引用卡片（L2/L3）：浅底 + 左竖线 */
+/* <blockquote style="margin:24px 0;padding:18px 20px;background:{{ACCENT_SOFT}};border-left:3px solid {{ACCENT}};border-radius:6px;color:{{TEXT}};line-height:1.8;"> */
+.quote-card {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 18px 20px;
+  color: var(--text);
+}
+
+/* 无序列表：marker 用次要色 */
+/* <ul style="margin:0 0 {{PARA_GAP}};padding-left:20px;color:{{TEXT_SECONDARY}};"> */
+/* <li style="margin:0 0 10px;color:{{TEXT_COLOR}};"> */
+ul { margin: 0 0 var(--para-gap); padding-left: 20px; color: var(--text-secondary); }
+li { margin: 0 0 10px; color: var(--text); }
+
+/* 强调着色（每段 ≤ 1 处） */
+/* <strong style="color:{{ACCENT}};font-weight:600;"> */
+.strong-accent { color: var(--accent); font-weight: 600; }
+
+/* 高亮浅底 */
+/* <span style="background:{{ACCENT_SOFT}};color:{{TEXT}};border-radius:3px;padding:1px 4px;"> */
+.highlight { background: var(--accent-soft); color: var(--text); border-radius: 3px; padding: 1px 4px; }
+
+/* 代码块：每行一个 p，禁用 white-space:pre */
+/* <section style="margin:24px 0;background:{{CODE_BG}};border-radius:6px;padding:16px 18px;"> */
+/*   <p style="margin:0;font-family:{{MONO_FONT_STACK}};font-size:14px;line-height:1.6;color:{{TEXT}};">行</p> */
+.code-block { margin: 24px 0; background: var(--code-bg); border-radius: 6px; padding: 16px 18px; }
+.code-line { margin: 0; font-family: var(--mono-font); font-size: 14px; line-height: 1.6; color: var(--text); }
+
+/* 图注 */
+/* <figcaption style="margin-top:10px;text-align:center;font-size:13px;color:{{TEXT_SECONDARY}};line-height:1.6;"> */
+figcaption { margin-top: 10px; text-align: center; font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+/* 眉题小标签 */
+/* <p style="margin:0 0 14px;font-size:12px;letter-spacing:2px;color:{{ACCENT}};"> */
+.eyebrow { margin: 0 0 14px; font-size: 12px; letter-spacing: 2px; color: var(--accent); }

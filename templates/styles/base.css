@@ -1,0 +1,85 @@
+/*
+ * base.css — 重置 + 通用配方
+ * 注意：这是「配方」，不是最终产物。产物必须把下面每条规则内联到元素 style 属性。
+ * 示例：正文段落 -> <p style="margin:0 0 16px;text-align:justify;font-size:16px;line-height:1.8;letter-spacing:0.5px;">
+ */
+
+/* 占位符 ↔ token 对照（产物中全部替换为具体值） */
+:root {
+  --page-bg:        {{PAGE_BG}};          /* tokens/color-palettes.md */
+  --content-bg:     {{CONTENT_BG}};
+  --text:           {{TEXT_COLOR}};
+  --text-secondary: {{TEXT_SECONDARY}};
+  --heading:        {{HEADING_COLOR}};
+  --accent:         {{ACCENT}};
+  --accent-soft:    {{ACCENT_SOFT}};
+  --divider:        {{DIVIDER}};
+  --quote-bar:      {{QUOTE_BAR}};
+  --code-bg:        {{CODE_BG}};
+  --body-font:      {{BODY_FONT_STACK}};
+  --heading-font:   {{HEADING_FONT_STACK}};
+  --mono-font:      {{MONO_FONT_STACK}};
+  --width:          {{CONTENT_WIDTH}};
+  --padding:        {{CONTAINER_PADDING}};
+  --para-gap:       {{PARA_GAP}};
+  --section-gap:    {{SECTION_GAP}};
+  --body-lh:        {{BODY_LINE_HEIGHT}};
+}
+
+/* 重置（产物中直接内联） */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* 容器（写在内层 section 上） */
+.container {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: var(--padding);
+  background: var(--content-bg);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: 16px;
+  line-height: var(--body-lh);
+  letter-spacing: 0.5px;
+}
+
+/* 通用分隔线（内联） */
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--divider);
+  margin: var(--para-gap) 0;
+}
+
+/* 图片（内联） */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* 表格（内联） */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.7;
+}
+th { background: var(--accent-soft); padding: 10px 12px; text-align: left; border: 1px solid var(--divider); font-weight: 600; }
+td { padding: 10px 12px; border: 1px solid var(--divider); text-align: left; }
+
+/* 行内代码（内联） */
+code {
+  font-family: var(--mono-font);
+  background: var(--code-bg);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 14px;
+}
+
+/* 链接（内联） */
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
