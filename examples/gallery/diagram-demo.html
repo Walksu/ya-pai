@@ -9,7 +9,10 @@
   header{max-width:1200px;margin:0 auto;padding:28px 20px 6px;}
   header h1{font-size:22px;margin:0 0 6px;}
   header p{font-size:13px;color:#5F6F5F;margin:0;line-height:1.8;}
-  .grid{max-width:1200px;margin:0 auto;padding:18px;display:flex;flex-wrap:wrap;gap:16px;}
+  .group{margin:0 auto;padding:6px 20px 0;max-width:1200px;}
+  .group-title{font-size:14px;font-weight:800;color:#1F241F;margin:20px 0 4px;padding-left:10px;border-left:4px solid #587258;}
+  .group-desc{font-size:12px;color:#5F6F5F;margin:0 0 10px;padding-left:10px;}
+  .grid{display:flex;flex-wrap:wrap;gap:16px;}
   .demo{width:368px;background:#fff;border-radius:12px;box-shadow:0 3px 14px rgba(0,0,0,.06);overflow:hidden;}
   .demo-head{padding:12px 16px 8px;}
   .demo-head h3{margin:0 0 4px;font-size:14px;font-weight:800;}
@@ -23,7 +26,11 @@
   <h1>ya-pai 图解总览（F14a–F14z，26 种）</h1>
   <p>全部微信兼容（无 SVG / absolute / grid），配色为「纸绿面色板」示例；实际排版时由 token 自动套用所选色板。每篇图解 ≤2 处，按内容语义选型。</p>
 </header>
-<div class="grid">
+
+<div class="group">
+  <p class="group-title">⚖️ 权衡 · 对比</p>
+  <p class="group-desc">二选一、此消彼长、表面 vs 本质、直接对立、量级对比</p>
+  <div class="grid">
   <div class="demo"><div class="demo-head"><h3>F14a 天平 / 跷跷板</h3><p>权衡、此消彼长</p></div><div class="canvas">
     <section style="margin:0 0 8px;"><section style="display:flex;justify-content:center;align-items:flex-end;">
       <section style="text-align:center;width:150px;"><p style="margin:0 0 6px;font-size:14px;font-weight:800;color:#1F241F;"><span leaf="">效率</span></p><section style="width:54px;height:54px;border-radius:50%;background:#C3D5C8;margin:0 auto;"><span leaf=""><br></span></section></section>
@@ -54,119 +61,19 @@
       <section style="flex:1;border-top:2px solid #5F6F5F;border-left:1px solid #C9D4C0;padding:14px 12px;"><p style="margin:0 0 4px;font-size:14px;font-weight:800;color:#1F241F;"><span leaf="">AaaS</span></p><p style="margin:0;font-size:12px;line-height:1.7;color:#2F352F;"><span leaf="">卖结果，直接完成工作流</span></p></section>
     </section>
   </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14n 管道流水线</h3><p>输入 → 处理 → 输出</p></div><div class="canvas">
-    <section style="margin:0 0 8px;display:flex;align-items:stretch;">
-      <section style="flex:1;background:#C3D5C8;border-radius:10px 0 0 10px;padding:12px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:11px;font-weight:800;color:#587258;"><span leaf="">01</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">输入</span></p></section>
-      <p style="margin:0;flex:0 0 20px;text-align:center;color:#587258;font-weight:900;font-size:15px;line-height:52px;"><span leaf="">→</span></p>
-      <section style="flex:1;background:#D8E6D8;padding:12px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:11px;font-weight:800;color:#587258;"><span leaf="">02</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">处理</span></p></section>
-      <p style="margin:0;flex:0 0 20px;text-align:center;color:#587258;font-weight:900;font-size:15px;line-height:52px;"><span leaf="">→</span></p>
-      <section style="flex:1;background:#587258;border-radius:0 10px 10px 0;padding:12px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:11px;font-weight:800;color:#FFFFFFB3;"><span leaf="">03</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#fff;"><span leaf="">输出</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14o 阶梯上升</h3><p>成长 / 爬坡 / 阶段跃迁</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="width:70%;background:#E6EDDB;border-radius:8px;padding:9px 12px;"><p style="margin:0;font-size:12px;font-weight:700;color:#2F352F;"><span leaf="">阶段一</span></p></section>
-      <section style="width:84%;background:#D8E6D8;border-radius:8px;padding:9px 12px;margin:6px 0 0 auto;"><p style="margin:0;font-size:12px;font-weight:700;color:#2F352F;"><span leaf="">阶段二</span></p></section>
-      <section style="width:94%;background:#C3D5C8;border-radius:8px;padding:9px 12px;margin:6px 0 0 auto;"><p style="margin:0;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">阶段三</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14p 回形迭代</h3><p>行为 → 反馈 → 优化</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="border:1px solid #C9D4C0;border-radius:10px;padding:12px 14px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">用户行为</span></p></section>
-      <p style="margin:4px 0;text-align:center;color:#587258;font-weight:900;font-size:14px;"><span leaf="">↓</span></p>
-      <section style="border:1px solid #C9D4C0;border-radius:10px;padding:12px 14px;background:#C3D5C8;"><p style="margin:0;font-size:13px;font-weight:700;color:#2F352F;"><span leaf="">偏好数据</span></p></section>
-      <p style="margin:4px 0;text-align:center;color:#587258;font-weight:900;font-size:14px;"><span leaf="">↑</span></p>
-      <section style="border:1px solid #587258;border-radius:10px;padding:12px 14px;background:#F6F7F0;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">模型再优化</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14q 里程碑</h3><p>阶段规划：已到 / 当前 / 未来</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="display:flex;justify-content:space-between;"><p style="margin:0;font-size:11px;font-weight:800;color:#5F6F5F;"><span leaf="">2024</span></p><p style="margin:0;font-size:11px;font-weight:800;color:#587258;"><span leaf="">2025</span></p><p style="margin:0;font-size:11px;font-weight:800;color:#1F241F;"><span leaf="">2026</span></p></section>
-      <section style="height:3px;background:linear-gradient(90deg,#C9D4C0,#587258);border-radius:2px;margin:6px 0 8px;"><span leaf=""><br></span></section>
-      <section style="display:flex;justify-content:space-between;"><p style="margin:0;font-size:11px;color:#5F6F5F;"><span leaf="">已发生</span></p><p style="margin:0;font-size:11px;color:#587258;font-weight:700;"><span leaf="">当前</span></p><p style="margin:0;font-size:11px;color:#2F352F;"><span leaf="">未来</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14r 条形对比</h3><p>同一指标的量差</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="display:flex;align-items:center;margin:0 0 8px;"><p style="margin:0;flex:0 0 90px;font-size:12px;color:#5F6F5F;"><span leaf="">A 模型</span></p><section style="flex:1;height:8px;background:#D8E6D8;border-radius:4px;"><section style="width:30%;height:8px;background:#587258;border-radius:4px;"><span leaf=""><br></span></section></section><p style="margin:0 0 0 8px;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">30%</span></p></section>
-      <section style="display:flex;align-items:center;margin:0 0 8px;"><p style="margin:0;flex:0 0 90px;font-size:12px;color:#5F6F5F;"><span leaf="">B 模型</span></p><section style="flex:1;height:8px;background:#D8E6D8;border-radius:4px;"><section style="width:55%;height:8px;background:#587258;border-radius:4px;"><span leaf=""><br></span></section></section><p style="margin:0 0 0 8px;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">55%</span></p></section>
-      <section style="display:flex;align-items:center;"><p style="margin:0;flex:0 0 90px;font-size:12px;color:#5F6F5F;"><span leaf="">C 模型</span></p><section style="flex:1;height:8px;background:#D8E6D8;border-radius:4px;"><section style="width:78%;height:8px;background:#587258;border-radius:4px;"><span leaf=""><br></span></section></section><p style="margin:0 0 0 8px;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">78%</span></p></section>
-    </section>
-  </div></div>
   <div class="demo"><div class="demo-head"><h3>F14s 双条镜像</h3><p>A vs B 量级对比</p></div><div class="canvas">
     <section style="margin:0 0 8px;">
       <section style="display:flex;align-items:center;margin:0 0 6px;"><section style="flex:1;display:flex;justify-content:flex-end;"><section style="width:40%;height:10px;background:#587258;border-radius:4px 0 0 4px;"><span leaf=""><br></span></section></section><p style="margin:0 8px;font-size:11px;font-weight:800;color:#5F6F5F;"><span leaf="">vs</span></p><section style="flex:1;"><section style="width:55%;height:10px;background:#C3D5C8;border-radius:0 4px 4px 0;"><span leaf=""><br></span></section></section></section>
       <section style="display:flex;justify-content:space-between;"><p style="margin:0;font-size:11px;color:#2F352F;"><span leaf="">甲 40%</span></p><p style="margin:0;font-size:11px;color:#5F6F5F;"><span leaf="">乙 55%</span></p></section>
     </section>
   </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14t 星级</h3><p>评价 / 强度</p></div><div class="canvas">
-    <section style="margin:0 0 8px;text-align:center;">
-      <p style="margin:0 0 6px;font-size:16px;letter-spacing:3px;"><span style="color:#587258;"><span leaf="">★★★★</span></span><span style="color:#C9D4C0;"><span leaf="">★</span></span></p>
-      <p style="margin:0;font-size:12px;color:#5F6F5F;"><span leaf="">上手难度 4 / 5</span></p>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14u 色阶热力</h3><p>程度档位：低 → 中 → 高</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="display:flex;gap:6px;"><section style="width:28px;height:28px;border-radius:8px;background:#E6EDDB;"><span leaf=""><br></span></section><section style="width:28px;height:28px;border-radius:8px;background:#D8E6D8;"><span leaf=""><br></span></section><section style="width:28px;height:28px;border-radius:8px;background:#C3D5C8;"><span leaf=""><br></span></section><section style="width:28px;height:28px;border-radius:8px;background:#587258;"><span leaf=""><br></span></section></section>
-      <section style="display:flex;justify-content:space-between;margin:6px 0 0;"><p style="margin:0;font-size:11px;color:#5F6F5F;"><span leaf="">低</span></p><p style="margin:0;font-size:11px;color:#2F352F;"><span leaf="">中</span></p><p style="margin:0;font-size:11px;color:#1F241F;"><span leaf="">高</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14v 比例条</h3><p>占比拆分</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="display:flex;height:14px;border-radius:7px;overflow:hidden;"><section style="flex:0 0 65%;background:#587258;"><span leaf=""><br></span></section><section style="flex:1;background:#C3D5C8;"><span leaf=""><br></span></section></section>
-      <section style="display:flex;justify-content:space-between;margin:6px 0 0;"><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">产品 65%</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#2F352F;"><span leaf="">工程 35%</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14w 角色链路</h3><p>带角色名的环节链</p></div><div class="canvas">
-    <section style="margin:0 0 8px;display:flex;align-items:stretch;">
-      <section style="flex:1;border-top:2px solid #587258;border-right:1px solid #C9D4C0;padding:10px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:10px;font-weight:800;color:#587258;"><span leaf="">产品</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">需求</span></p></section>
-      <p style="margin:0;flex:0 0 18px;text-align:center;color:#587258;font-weight:900;font-size:14px;line-height:46px;"><span leaf="">→</span></p>
-      <section style="flex:1;border-top:2px solid #587258;border-right:1px solid #C9D4C0;padding:10px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:10px;font-weight:800;color:#587258;"><span leaf="">工程</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">实现</span></p></section>
-      <p style="margin:0;flex:0 0 18px;text-align:center;color:#587258;font-weight:900;font-size:14px;line-height:46px;"><span leaf="">→</span></p>
-      <section style="flex:1;border-top:2px solid #5F6F5F;padding:10px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:10px;font-weight:800;color:#5F6F5F;"><span leaf="">运营</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">反馈</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14x 映射双列</h3><p>问题 → 解法 / 旧 → 新</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="display:flex;align-items:flex-start;">
-        <section style="flex:1;min-width:0;"><p style="margin:0 0 8px;font-size:12px;font-weight:800;color:#587258;"><span leaf="">旧问题</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">模型能力差</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">人工操作多</span></p><p style="margin:0;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">反馈慢</span></p></section>
-        <p style="margin:0 10px;font-size:16px;font-weight:900;color:#587258;line-height:32px;"><span leaf="">→</span></p>
-        <section style="flex:1;min-width:0;"><p style="margin:0 0 8px;font-size:12px;font-weight:800;color:#587258;"><span leaf="">新解法</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">AaaS 执行体</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">自动化闭环</span></p><p style="margin:0;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">数据飞轮</span></p></section>
-      </section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14y 状态迁移</h3><p>就绪 → 运行 → 完成</p></div><div class="canvas">
-    <section style="margin:0 0 8px;display:flex;align-items:flex-start;justify-content:center;">
-      <section style="text-align:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#587258;color:#fff;font-size:12px;font-weight:800;"><span leaf="">S1</span></span><p style="margin:4px 0 0;font-size:11px;color:#2F352F;"><span leaf="">就绪</span></p></section>
-      <p style="margin:8px 8px 0;color:#587258;font-weight:900;font-size:14px;"><span leaf="">→</span></p>
-      <section style="text-align:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#D8E6D8;color:#587258;font-size:12px;font-weight:800;"><span leaf="">S2</span></span><p style="margin:4px 0 0;font-size:11px;color:#2F352F;"><span leaf="">运行</span></p></section>
-      <p style="margin:8px 8px 0;color:#587258;font-weight:900;font-size:14px;"><span leaf="">→</span></p>
-      <section style="text-align:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#C3D5C8;color:#1F241F;font-size:12px;font-weight:800;"><span leaf="">S3</span></span><p style="margin:4px 0 0;font-size:11px;color:#2F352F;"><span leaf="">完成</span></p></section>
-    </section>
-  </div></div>
-  <div class="demo"><div class="demo-head"><h3>F14z 关键词云</h3><p>并列概念的权重</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;">
-        <span style="background:#587258;color:#fff;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:800;"><span leaf="">飞轮</span></span>
-        <span style="background:#D8E6D8;color:#1F241F;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;"><span leaf="">闭环</span></span>
-        <span style="background:#C3D5C8;color:#2F352F;border-radius:999px;padding:4px 10px;font-size:11px;"><span leaf="">偏好数据</span></span>
-        <span style="background:#E6EDDB;color:#2F352F;border-radius:999px;padding:4px 10px;font-size:11px;"><span leaf="">工程黑盒</span></span>
-        <span style="background:#C3D5C8;color:#2F352F;border-radius:999px;padding:4px 10px;font-size:11px;"><span leaf="">安全责任</span></span>
-      </section>
-    </section>
-  </div></div>
+  </div>
 </div>
-<div class="foot">说明：以上为 26 种图解形态的预览（F14a–F14z）。组件库里的模板全部用 {{TOKEN}} 占位，实际排版时按所选色板/面色板自动套用；图解放大版可直接复制对应模板修改。图解是重组件，每篇 ≤2 处。</div>
-</body>
-</html>
-  <div class="demo"><div class="demo-head"><h3>F14f 漏斗</h3><p>层层收敛 / 筛选</p></div><div class="canvas">
-    <section style="margin:0 0 8px;">
-      <section style="width:88%;background:#C3D5C8;border-radius:8px;padding:9px 14px;margin:0 auto 6px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">好奇</span></p></section>
-      <section style="width:72%;background:#D8E6D8;border-radius:8px;padding:9px 14px;margin:0 auto 6px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">试用</span></p></section>
-      <section style="width:56%;background:#E6EDDB;border-radius:8px;padding:9px 14px;margin:0 auto 6px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">付费</span></p></section>
-      <section style="width:40%;background:#587258;border-radius:8px;padding:9px 14px;margin:0 auto;"><p style="margin:0;font-size:13px;font-weight:800;color:#fff;"><span leaf="">留存</span></p></section>
-    </section>
-  </div></div>
+
+<div class="group">
+  <p class="group-title">🧅 分层 · 结构</p>
+  <p class="group-desc">核心/中间/外层、多级体系、底座支撑、主节点分支、整体包含局部、架构层级</p>
+  <div class="grid">
   <div class="demo"><div class="demo-head"><h3>F14g 同心圆（洋葱）</h3><p>核心 / 中间层 / 外层</p></div><div class="canvas">
     <section style="margin:0 0 8px;text-align:center;">
       <section style="width:220px;height:220px;border-radius:50%;background:#C3D5C8;margin:0 auto;display:flex;align-items:center;justify-content:center;">
@@ -220,6 +127,28 @@
       <section style="background:#C3D5C8;border:1px solid #C9D4C0;border-radius:8px;padding:8px 12px;margin:4px 20px 0;"><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">L3 Agent</span></p></section>
     </section>
   </div></div>
+  </div>
+</div>
+
+<div class="group">
+  <p class="group-title">🔻 收敛 · 筛选</p>
+  <p class="group-desc">层层收敛、筛选漏斗</p>
+  <div class="grid">
+  <div class="demo"><div class="demo-head"><h3>F14f 漏斗</h3><p>层层收敛 / 筛选</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="width:88%;background:#C3D5C8;border-radius:8px;padding:9px 14px;margin:0 auto 6px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">好奇</span></p></section>
+      <section style="width:72%;background:#D8E6D8;border-radius:8px;padding:9px 14px;margin:0 auto 6px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">试用</span></p></section>
+      <section style="width:56%;background:#E6EDDB;border-radius:8px;padding:9px 14px;margin:0 auto 6px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">付费</span></p></section>
+      <section style="width:40%;background:#587258;border-radius:8px;padding:9px 14px;margin:0 auto;"><p style="margin:0;font-size:13px;font-weight:800;color:#fff;"><span leaf="">留存</span></p></section>
+    </section>
+  </div></div>
+  </div>
+</div>
+
+<div class="group">
+  <p class="group-title">🔄 流程 · 循环</p>
+  <p class="group-desc">循环飞轮、流水线、爬坡成长、反馈迭代、里程碑、角色链路、映射、状态流转</p>
+  <div class="grid">
   <div class="demo"><div class="demo-head"><h3>F14m 闭环环</h3><p>循环 / 飞轮</p></div><div class="canvas">
     <section style="margin:0 0 8px;text-align:center;">
       <section style="display:flex;justify-content:space-between;margin:0 0 6px;">
@@ -234,3 +163,118 @@
       <p style="margin:8px 0 0;font-size:12px;color:#5F6F5F;"><span leaf="">每天转一圈，越来越聪明</span></p>
     </section>
   </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14n 管道流水线</h3><p>输入 → 处理 → 输出</p></div><div class="canvas">
+    <section style="margin:0 0 8px;display:flex;align-items:stretch;">
+      <section style="flex:1;background:#C3D5C8;border-radius:10px 0 0 10px;padding:12px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:11px;font-weight:800;color:#587258;"><span leaf="">01</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">输入</span></p></section>
+      <p style="margin:0;flex:0 0 20px;text-align:center;color:#587258;font-weight:900;font-size:15px;line-height:52px;"><span leaf="">→</span></p>
+      <section style="flex:1;background:#D8E6D8;padding:12px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:11px;font-weight:800;color:#587258;"><span leaf="">02</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">处理</span></p></section>
+      <p style="margin:0;flex:0 0 20px;text-align:center;color:#587258;font-weight:900;font-size:15px;line-height:52px;"><span leaf="">→</span></p>
+      <section style="flex:1;background:#587258;border-radius:0 10px 10px 0;padding:12px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:11px;font-weight:800;color:#FFFFFFB3;"><span leaf="">03</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#fff;"><span leaf="">输出</span></p></section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14o 阶梯上升</h3><p>成长 / 爬坡 / 阶段跃迁</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="width:70%;background:#E6EDDB;border-radius:8px;padding:9px 12px;"><p style="margin:0;font-size:12px;font-weight:700;color:#2F352F;"><span leaf="">阶段一</span></p></section>
+      <section style="width:84%;background:#D8E6D8;border-radius:8px;padding:9px 12px;margin:6px 0 0 auto;"><p style="margin:0;font-size:12px;font-weight:700;color:#2F352F;"><span leaf="">阶段二</span></p></section>
+      <section style="width:94%;background:#C3D5C8;border-radius:8px;padding:9px 12px;margin:6px 0 0 auto;"><p style="margin:0;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">阶段三</span></p></section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14p 回形迭代</h3><p>行为 → 反馈 → 优化</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="border:1px solid #C9D4C0;border-radius:10px;padding:12px 14px;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">用户行为</span></p></section>
+      <p style="margin:4px 0;text-align:center;color:#587258;font-weight:900;font-size:14px;"><span leaf="">↓</span></p>
+      <section style="border:1px solid #C9D4C0;border-radius:10px;padding:12px 14px;background:#C3D5C8;"><p style="margin:0;font-size:13px;font-weight:700;color:#2F352F;"><span leaf="">偏好数据</span></p></section>
+      <p style="margin:4px 0;text-align:center;color:#587258;font-weight:900;font-size:14px;"><span leaf="">↑</span></p>
+      <section style="border:1px solid #587258;border-radius:10px;padding:12px 14px;background:#F6F7F0;"><p style="margin:0;font-size:13px;font-weight:800;color:#1F241F;"><span leaf="">模型再优化</span></p></section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14q 里程碑</h3><p>阶段规划：已到 / 当前 / 未来</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="display:flex;justify-content:space-between;"><p style="margin:0;font-size:11px;font-weight:800;color:#5F6F5F;"><span leaf="">2024</span></p><p style="margin:0;font-size:11px;font-weight:800;color:#587258;"><span leaf="">2025</span></p><p style="margin:0;font-size:11px;font-weight:800;color:#1F241F;"><span leaf="">2026</span></p></section>
+      <section style="height:3px;background:linear-gradient(90deg,#C9D4C0,#587258);border-radius:2px;margin:6px 0 8px;"><span leaf=""><br></span></section>
+      <section style="display:flex;justify-content:space-between;"><p style="margin:0;font-size:11px;color:#5F6F5F;"><span leaf="">已发生</span></p><p style="margin:0;font-size:11px;color:#587258;font-weight:700;"><span leaf="">当前</span></p><p style="margin:0;font-size:11px;color:#2F352F;"><span leaf="">未来</span></p></section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14w 角色链路</h3><p>带角色名的环节链</p></div><div class="canvas">
+    <section style="margin:0 0 8px;display:flex;align-items:stretch;">
+      <section style="flex:1;border-top:2px solid #587258;border-right:1px solid #C9D4C0;padding:10px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:10px;font-weight:800;color:#587258;"><span leaf="">产品</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">需求</span></p></section>
+      <p style="margin:0;flex:0 0 18px;text-align:center;color:#587258;font-weight:900;font-size:14px;line-height:46px;"><span leaf="">→</span></p>
+      <section style="flex:1;border-top:2px solid #587258;border-right:1px solid #C9D4C0;padding:10px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:10px;font-weight:800;color:#587258;"><span leaf="">工程</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">实现</span></p></section>
+      <p style="margin:0;flex:0 0 18px;text-align:center;color:#587258;font-weight:900;font-size:14px;line-height:46px;"><span leaf="">→</span></p>
+      <section style="flex:1;border-top:2px solid #5F6F5F;padding:10px 8px;text-align:center;"><p style="margin:0 0 4px;font-size:10px;font-weight:800;color:#5F6F5F;"><span leaf="">运营</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">反馈</span></p></section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14x 映射双列</h3><p>问题 → 解法 / 旧 → 新</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="display:flex;align-items:flex-start;">
+        <section style="flex:1;min-width:0;"><p style="margin:0 0 8px;font-size:12px;font-weight:800;color:#587258;"><span leaf="">旧问题</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">模型能力差</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">人工操作多</span></p><p style="margin:0;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">反馈慢</span></p></section>
+        <p style="margin:0 10px;font-size:16px;font-weight:900;color:#587258;line-height:32px;"><span leaf="">→</span></p>
+        <section style="flex:1;min-width:0;"><p style="margin:0 0 8px;font-size:12px;font-weight:800;color:#587258;"><span leaf="">新解法</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">AaaS 执行体</span></p><p style="margin:0 0 8px;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">自动化闭环</span></p><p style="margin:0;font-size:13px;line-height:1.7;color:#2F352F;"><span leaf="">数据飞轮</span></p></section>
+      </section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14y 状态迁移</h3><p>就绪 → 运行 → 完成</p></div><div class="canvas">
+    <section style="margin:0 0 8px;display:flex;align-items:flex-start;justify-content:center;">
+      <section style="text-align:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#587258;color:#fff;font-size:12px;font-weight:800;"><span leaf="">S1</span></span><p style="margin:4px 0 0;font-size:11px;color:#2F352F;"><span leaf="">就绪</span></p></section>
+      <p style="margin:8px 8px 0;color:#587258;font-weight:900;font-size:14px;"><span leaf="">→</span></p>
+      <section style="text-align:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#D8E6D8;color:#587258;font-size:12px;font-weight:800;"><span leaf="">S2</span></span><p style="margin:4px 0 0;font-size:11px;color:#2F352F;"><span leaf="">运行</span></p></section>
+      <p style="margin:8px 8px 0;color:#587258;font-weight:900;font-size:14px;"><span leaf="">→</span></p>
+      <section style="text-align:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#C3D5C8;color:#1F241F;font-size:12px;font-weight:800;"><span leaf="">S3</span></span><p style="margin:4px 0 0;font-size:11px;color:#2F352F;"><span leaf="">完成</span></p></section>
+    </section>
+  </div></div>
+  </div>
+</div>
+
+<div class="group">
+  <p class="group-title">📊 度量 · 评价</p>
+  <p class="group-desc">同一指标量差、星级评价、程度档位、占比拆分</p>
+  <div class="grid">
+  <div class="demo"><div class="demo-head"><h3>F14r 条形对比</h3><p>同一指标的量差</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="display:flex;align-items:center;margin:0 0 8px;"><p style="margin:0;flex:0 0 90px;font-size:12px;color:#5F6F5F;"><span leaf="">A 模型</span></p><section style="flex:1;height:8px;background:#D8E6D8;border-radius:4px;"><section style="width:30%;height:8px;background:#587258;border-radius:4px;"><span leaf=""><br></span></section></section><p style="margin:0 0 0 8px;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">30%</span></p></section>
+      <section style="display:flex;align-items:center;margin:0 0 8px;"><p style="margin:0;flex:0 0 90px;font-size:12px;color:#5F6F5F;"><span leaf="">B 模型</span></p><section style="flex:1;height:8px;background:#D8E6D8;border-radius:4px;"><section style="width:55%;height:8px;background:#587258;border-radius:4px;"><span leaf=""><br></span></section></section><p style="margin:0 0 0 8px;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">55%</span></p></section>
+      <section style="display:flex;align-items:center;"><p style="margin:0;flex:0 0 90px;font-size:12px;color:#5F6F5F;"><span leaf="">C 模型</span></p><section style="flex:1;height:8px;background:#D8E6D8;border-radius:4px;"><section style="width:78%;height:8px;background:#587258;border-radius:4px;"><span leaf=""><br></span></section></section><p style="margin:0 0 0 8px;font-size:12px;font-weight:800;color:#1F241F;"><span leaf="">78%</span></p></section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14t 星级</h3><p>评价 / 强度</p></div><div class="canvas">
+    <section style="margin:0 0 8px;text-align:center;">
+      <p style="margin:0 0 6px;font-size:16px;letter-spacing:3px;"><span style="color:#587258;"><span leaf="">★★★★</span></span><span style="color:#C9D4C0;"><span leaf="">★</span></span></p>
+      <p style="margin:0;font-size:12px;color:#5F6F5F;"><span leaf="">上手难度 4 / 5</span></p>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14u 色阶热力</h3><p>程度档位：低 → 中 → 高</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="display:flex;gap:6px;"><section style="width:28px;height:28px;border-radius:8px;background:#E6EDDB;"><span leaf=""><br></span></section><section style="width:28px;height:28px;border-radius:8px;background:#D8E6D8;"><span leaf=""><br></span></section><section style="width:28px;height:28px;border-radius:8px;background:#C3D5C8;"><span leaf=""><br></span></section><section style="width:28px;height:28px;border-radius:8px;background:#587258;"><span leaf=""><br></span></section></section>
+      <section style="display:flex;justify-content:space-between;margin:6px 0 0;"><p style="margin:0;font-size:11px;color:#5F6F5F;"><span leaf="">低</span></p><p style="margin:0;font-size:11px;color:#2F352F;"><span leaf="">中</span></p><p style="margin:0;font-size:11px;color:#1F241F;"><span leaf="">高</span></p></section>
+    </section>
+  </div></div>
+  <div class="demo"><div class="demo-head"><h3>F14v 比例条</h3><p>占比拆分</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="display:flex;height:14px;border-radius:7px;overflow:hidden;"><section style="flex:0 0 65%;background:#587258;"><span leaf=""><br></span></section><section style="flex:1;background:#C3D5C8;"><span leaf=""><br></span></section></section>
+      <section style="display:flex;justify-content:space-between;margin:6px 0 0;"><p style="margin:0;font-size:12px;font-weight:700;color:#1F241F;"><span leaf="">产品 65%</span></p><p style="margin:0;font-size:12px;font-weight:700;color:#2F352F;"><span leaf="">工程 35%</span></p></section>
+    </section>
+  </div></div>
+  </div>
+</div>
+
+<div class="group">
+  <p class="group-title">🏷️ 并列 · 权重</p>
+  <p class="group-desc">并列概念的权重</p>
+  <div class="grid">
+  <div class="demo"><div class="demo-head"><h3>F14z 关键词云</h3><p>并列概念的权重</p></div><div class="canvas">
+    <section style="margin:0 0 8px;">
+      <section style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;">
+        <span style="background:#587258;color:#fff;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:800;"><span leaf="">飞轮</span></span>
+        <span style="background:#D8E6D8;color:#1F241F;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;"><span leaf="">闭环</span></span>
+        <span style="background:#C3D5C8;color:#2F352F;border-radius:999px;padding:4px 10px;font-size:11px;"><span leaf="">偏好数据</span></span>
+        <span style="background:#E6EDDB;color:#2F352F;border-radius:999px;padding:4px 10px;font-size:11px;"><span leaf="">工程黑盒</span></span>
+        <span style="background:#C3D5C8;color:#2F352F;border-radius:999px;padding:4px 10px;font-size:11px;"><span leaf="">安全责任</span></span>
+      </section>
+    </section>
+  </div></div>
+  </div>
+</div>
+
+<div class="foot">说明：以上为 26 种图解形态的预览（F14a–F14z），按内容语义分为五组。组件库里的模板全部用 {{TOKEN}} 占位，实际排版时按所选色板/面色板自动套用；图解放大版可直接复制对应模板修改。图解是重组件，每篇 ≤2 处，选择按「内容语义」而非气质：权衡→天平/光谱，分层→同心圆，循环→闭环环，数据→条形，评价→星级。</div>
+</body>
+</html>
